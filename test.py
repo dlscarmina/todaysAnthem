@@ -6,8 +6,8 @@ app = Flask(__name__)
 
 from recommender.api import Recommender
 
-@app.route('/rec/<genre>/<danceability>/<energy>/<tempo>/<valence>')
-def rec(genre, danceability, energy, tempo, valence):
+@app.route('/rec/<genre>/<danceability>/<energy>/<valence>')
+def rec(genre, danceability, energy, valence):
     recommender = Recommender()
     recommender.genres = [
                 genre
@@ -15,7 +15,6 @@ def rec(genre, danceability, energy, tempo, valence):
     recommender.track_attributes = {
                 'danceability': danceability,
                 'energy': energy,
-                'tempo': tempo,
                 'valence': valence
                 }
     
@@ -41,10 +40,9 @@ def songRecommender():
         mygenre = request.form['genre']
         mydance = request.form['dance'],
         myenergy = request.form['energy'],
-        mytempo = request.form['tempo'],
         myvalence = request.form['valence']
 
-        return redirect(url_for('rec', genre = mygenre, danceability = mydance, energy = myenergy, tempo = mytempo, valence = myvalence))
+        return redirect(url_for('rec', genre = mygenre, danceability = mydance, energy = myenergy, valence = myvalence))
 
 @app.route('/')
 def index():

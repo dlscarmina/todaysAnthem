@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Today's Anthem</title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400" rel="stylesheet"> 
+        <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css"> -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/static/swiper.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+       
+    </head>
+
+    <body>
+
+    <form action = "http://localhost:5000/form" method = "post">
+        <div class="vertical-center home">
+            <div class="container">
+                <!-- <img src="./radio-waves.svg"> -->
+                <h1>TODAY'S ANTHEM</h1>
+            </div>
+        </div>
+
+        <div class="vertical-center genre">
+            <div class="container">
+                <h2>genre</h2>
+                <div>
+                
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide">
+                        <div class = "imgBx rb" id="r&b" class="rb">
+                            <img class = "rb" src ="/static/r&b.svg">
+                            </div>
+                            <div class ="details">
+                                <h3><br><i>r & b</i></h3>
+                            </div>
+                        </div>
+                        
+
+                    <div class="swiper-slide">
+                        <div class = "imgBx" id="pop">
+                            <img src ="/static/pop.svg">
+                            </div>
+                            <div class ="details">
+                                <h3><br><i>pop</i></h3>
+                            </div>
+                        </div>
+
+                    <div class="swiper-slide" >
+                        <div class = "imgBx" id="classical">
+                            <img src ="/static/classical.svg">
+                            </div>
+                            <div class ="details">
+                                <h3><br><i>classical</i></h3>
+                            </div>
+                        </div>
+
+                    <div class="swiper-slide">
+                        <div class = "imgBx" id="hip-hop">
+                            <img src ="/static/hip-hop.svg">
+                            </div>
+                            <div class ="details">
+                                <h3><br><i>hip-hop</i></h3>
+                            </div>
+                        </div>
+
+                    <div class="swiper-slide" >
+                        <div class = "imgBx" id="anime">
+                            <img src ="/static/anime.svg">
+                            </div>
+                            <div class ="details">
+                                <h3><br><i>anime</i></h3>
+                            </div>
+                        </div>
+
+                    <div class="swiper-slide" >
+                        <div class = "imgBx" id="rock">
+                            <img src ="/static/rock.svg">
+                            </div>
+                            <div class ="details">
+                                <h3><br><i>rock</i></h3>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+
+        <div class="vertical-center mood">
+            <div class="container text-center">
+                <div>
+                    <div class="container-fluid text-center">
+                    <div class="circle_container col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
+                        <img class="transparent_square" src="http://brentapac.com/wp-content/uploads/2017/03/transparent-square.png" width="2" height="2" />
+                        <div class="central_text text-center">
+                            <h2>mood</h2>
+                        </div>
+                        
+                        <div class="moon_container joy"><img class="moon moon1" src="/static/joy.svg"></div>
+                        <div class="moon_container sadness"><img class="moon sadness" src="/static/sadness.svg"></div>
+                        <div class="moon_container tired"><img class="moon tired" src="/static/disgust.svg""></div>
+                        <div class="moon_container fear"><img class="moon fear" src="/static/fear.svg""></div>
+                        <div class="moon_container anger"><img class="moon anger" src="/static/anger.svg""></div>
+                        <div class="moon_container in_love"><img class="moon in_love" src="/static/in_love.svg""></div>
+                        <div class="moon_container apathetic"><img class="moon apathetic" src="/static/apathetic.svg""></div>
+                        <div class="moon_container disgust"><img class="moon disgust" src="/static/tired.svg""></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="vertical-center energy">
+            <div class="container">
+                <h2>energy</h2>
+                <div>
+                        <br><br><br><br>
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                        <i>lazy to excited</i>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="vertical-center task">
+            <div class="container">
+                <h2></h2>
+                <div>
+            <p class="hide">Genre</p>
+            <p class="hide"><input id ="genre" type = "text" name = "genre"/></p>
+            <p class="hide">Enter danceability (0.0-1.0):</p>
+            <p class="hide"><input id ="dance" type = "text" name = "dance" /></p>
+            <p class="hide">Enter energy (0.0-1.0):</p>
+            <p class="hide"><input id ="energy" type = "text" name = "energy" /></p>
+            <p class="hide">Enter valence: </p>
+            <p class="hide"><input id ="valence" type = "text" name = "valence" /></p>
+            <p><input type = "submit" value = "submit" /></p>
+                </div>
+            </div>
+        </div>
+        <style type="text/css">
+            /*
+
+COLORS
+------
+
+
+*/
+
+body {
+    font-family: 'Nunito', 'Open-Sans', sans-serif;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+h1 {
+    font-size: 4.125rem;
+    letter-spacing: 0.04em;
+}
+
+h2 {
+    font-size: 4.125rem;
+    letter-spacing: 0.04em;
+    font-weight: 300;
+}
+
+.container {
+    /* border: 2px solid red;  */
+}
+
+.vertical-center {
+    /* border: 2px solid red; */
+
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
+    
+    color: #545252;
+}
+
+.home {  
+    background: linear-gradient(180deg, #F3F8FF 0%, #E8F2FF 93.1%, #DEECFF 100%);
+}
+
+.home .container img {
+    opacity: 0.125;
+    height: auto;
+    width: 35vw;
+}
+
+.genre {
+    background: linear-gradient(180deg, #DEECFF 0%, #D0DBFF 93.61%, #C6CFFF 100%);
+}
+
+.mood {
+    background: linear-gradient(180deg, #C6CFFF 0%, #C8D1FF 93.7%, #E0E1FF 100%);
+}
+
+
+.energy {
+    background: linear-gradient(180deg, #E0E1FF 0%, #F2E8F7 36.39%, rgba(229, 192, 230, 0.8) 100%);
+}
+
+.task {
+    background: linear-gradient(180deg, #EBCFEC 0%, #CAFBFF 100%, #CBFCFF 100%);
+}
+
+.song {
+    background: #CAFBFF;
+}
+
+
+/* GENRE */
+.swiper-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    width: auto;
+    height: 60vh;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 700px;
+    height: 700px;
+    margin: auto;
+}
+.swiper-slide img {
+    height: 40vh;
+    width: auto;
+}
+
+/* MOOD */
+.transparent_square{
+    width: 100%;
+    height: auto;
+}
+.container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.central_text{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.moon_container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 25%;
+    transform: translate(-50%, -50%);
+}
+.moon{
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 175%;
+}
+.container-fluid img {
+    transition: transform .2s;
+}
+.container-fluid img:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.moon_container.joy{
+    transform: translate(-50%, -50%);
+}
+.moon_container.sadness{
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.moon_container.disgust{
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+.moon_container.fear{
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+.moon_container.anger{
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+.moon_container.in_love{
+    transform: translate(-50%, -50%) rotate(225deg);
+}
+.moon_container.apathetic{
+    transform: translate(-50%, -50%) rotate(270deg);
+}
+.moon_container.tired{
+    transform: translate(-50%, -50%) rotate(315deg);
+}
+.moon.sadness{
+    transform: rotate(-45deg);
+}
+.moon.disgust{
+    transform: rotate(-90deg);
+}
+.moon.fear{
+    transform: rotate(-135deg);
+}
+.moon.anger{
+    transform: rotate(-180deg);
+}
+.moon.in_love{
+    transform: rotate(-225deg);
+}
+.moon.apathetic{
+    transform: rotate(-270deg);
+}
+.moon.tired{
+    transform: rotate(-315deg);
+}
+
+/* ENERGY */
+.slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #fff;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: rgb(153, 217, 223);
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: rgb(153, 217, 223);
+    cursor: pointer;
+  }
+            .hide {
+                display: none;
+            }
+        </style>
+        <script type="text/javascript" src="/static/swiper.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                coverflowEffect: {
+                    rotate: 100,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows : false,
+                },
+                pagination: {
+                el: '.swiper-pagination',
+                },
+            });
+        </script>
+        <script type = "text/javascript" src = "http://code.jquery.com/jquery-1.4.3.min.js"></script>
+        <script type="text/javascript">
+            $('#r&b').click(function() {
+                console.log("r&b");
+                $('#genre').val("soul");
+            });
+
+            $('.rb').click(function() {
+                console.log("r&b");
+                $('#genre').val("soul");
+            });
+
+            $('#pop').click(function() {
+                console.log("pop");
+                $('#genre').val("pop");
+            });
+
+            $('#classical').click(function() {
+                console.log("classical");
+                $('#genre').val("classical");
+            });
+
+            $('#hip-hop').click(function() {
+                console.log("hip-hop");
+                $('#genre').val("hip-hop");
+            });
+
+            $('#anime').click(function() {
+                console.log("anime");
+                $('#genre').val("anime");
+            });
+            $('#rock').click(function() {
+                console.log("rock");
+                $('#genre').val("rock");
+            });
+            $('#myRange').click(function(){
+                console.log(String.valueOf(parseFloat(this.value) * 0.01));
+                $('#energy').val(parseFloat(this.value) * 0.01);
+                $('#dance').val(parseFloat(this.value) * 0.01);
+            });
+            $('.joy').click(function() {
+                console.log("joy - valence:1.0");
+                $('#valence').val("1.0");
+            });
+            $('.sadness').click(function() {
+                console.log("sadness - valence:0.2");
+                $('#valence').val("0.2"); 
+            });
+            $('.disgust').click(function() {
+                console.log("disgust - valence:0.3");
+                $('#valence').val("0.3");
+            });
+            $('.fear').click(function() {
+                console.log("fear - 0.4");
+                $('#valence').val("0.4");
+            });
+            $('.anger').click(function() {
+                console.log("anger - 0.1");
+                $('#valence').val("0.1");
+            });
+            $('.in_love').click(function() {
+                console.log("in_love - 0.8");
+                $('#valence').val("0.8");
+            });
+            $('.apathetic').click(function() {
+                console.log("apathetic - 0.5");
+                $('#valence').val("0.5");
+            });
+            $('.tired').click(function() {
+                console.log("tired - 0.6");
+                $('#valence').val("0.6");
+            });
+        </script>
+        </form>
+    </body>
+</html>

@@ -74,25 +74,40 @@ h2 {
 }
 
 
+/* GENRE */
+.swiper-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    width: 2000px;
+    height: 1000px;
+    margin: auto;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 700px;
+    height: 700px;
+    background: #fff;
+    margin: auto;
+}
+
 /* MOOD */
 .transparent_square{
 	width: 100%;
     height: auto;
 }
-
 .container-fluid {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .central_text{
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
 	position: absolute;
 }
-
 .moon_container{
 	position: absolute;
 	left: 50%;
@@ -100,14 +115,12 @@ h2 {
 	width: 25%;
 	transform: translate(-50%, -50%);
 }
-
 .moon{
 	width: 100%;
 	height: auto;
 	position: relative;
 	left: 175%;
 }
-
 .moon_container.moon1{
 	transform: translate(-50%, -50%);
 }
@@ -132,7 +145,6 @@ h2 {
 .moon_container.moon8{
 	transform: translate(-50%, -50%) rotate(315deg);
 }
-
 .moon.moon2{
 	transform: rotate(-45deg);
 }

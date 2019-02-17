@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, redirect, url_for, request
+from flask import Flask, redirect, url_for, request, render_template
 app = Flask(__name__)
 
 
@@ -9,7 +9,6 @@ from recommender.api import Recommender
 @app.route('/rec/<genre>/<danceability>/<energy>/<tempo>/<valence>')
 def rec(genre, danceability, energy, tempo, valence):
     recommender = Recommender()
-    #recommender.artists = 'Green Day'
     recommender.genres = [
                 genre
     ]
@@ -21,11 +20,15 @@ def rec(genre, danceability, energy, tempo, valence):
                 }
     
     recommendations = recommender.find_recommendations()
-    output = ""
+    output = []
+
     for recommendation in recommendations['tracks']:
-        output += ("%s - %s\n" % (recommendation['name'], recommendation['artists'][0]['name']))
-        output += ("URL: %s\n\n" % (recommendation['external_urls'])['spotify'] )    
-    return output
+        output.append({
+            'song' : recommendation['name'],
+            'artist' : recommendation['artists'][0]['name'],
+            'url' : (recommendation['external_urls'])['spotify']
+            }) 
+    return render_template('anthem.html', recs = output)
 
 @app.route('/form', methods = ['POST'])
 def songRecommender():
@@ -37,6 +40,10 @@ def songRecommender():
         myvalence = request.form['valence']
 
         return redirect(url_for('rec', genre = mygenre, danceability = mydance, energy = myenergy, tempo = mytempo, valence = myvalence))
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run()

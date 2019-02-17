@@ -4,11 +4,30 @@
 	<title></title>
 </head>
 <body>
-<div>{{ recs[0]['song'] }} by {{ recs[0]['artist'] }}</div>
 
-{{ recs[0]['uri'] }}
+<iframe id="spotifyembed" src="" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<div id="song">{{ recs[0]['song'] }}</div>
+<br><br>
+<div id="artist">{{ recs[0]['artist'] }}</div>
 
-<iframe src="{{ recs[0]['uri'] }}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-<!-- iframe src={{ recs[0]['url'] }} width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
+<button id="increment">increment</button>
+
+<script type = "text/javascript" src = "http://code.jquery.com/jquery-1.4.3.min.js"></script>
+<script type="text/javascript">
+	var recs = {{ recs|tojson }};
+
+	console.log(recs);
+
+	var i = 0;
+	$('#increment').click(function() {
+			i = i + 1;
+			$('#spotifyembed').attr('src', recs[i].uri );
+			$('#song').text(recs[i].song);
+			$('#artist').text(recs[i].artist)
+		}
+	);
+
+
+</script>
 </body>
 </html>

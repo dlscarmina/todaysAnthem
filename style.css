@@ -121,48 +121,48 @@ h2 {
 	position: relative;
 	left: 175%;
 }
-.moon_container.moon1{
+.moon_container.joy{
 	transform: translate(-50%, -50%);
 }
-.moon_container.moon2{
+.moon_container.sadness{
 	transform: translate(-50%, -50%) rotate(45deg);
 }
-.moon_container.moon3{
+.moon_container.disgust{
 	transform: translate(-50%, -50%) rotate(90deg);
 }
-.moon_container.moon4{
+.moon_container.fear{
 	transform: translate(-50%, -50%) rotate(135deg);
 }
-.moon_container.moon5{
+.moon_container.anger{
 	transform: translate(-50%, -50%) rotate(180deg);
 }
-.moon_container.moon6{
+.moon_container.in_love{
 	transform: translate(-50%, -50%) rotate(225deg);
 }
-.moon_container.moon7{
+.moon_container.apathetic{
 	transform: translate(-50%, -50%) rotate(270deg);
 }
-.moon_container.moon8{
+.moon_container.tired{
 	transform: translate(-50%, -50%) rotate(315deg);
 }
-.moon.moon2{
+.moon.sadness{
 	transform: rotate(-45deg);
 }
-.moon.moon3{
+.moon.disgust{
 	transform: rotate(-90deg);
 }
-.moon.moon4{
+.moon.fear{
 	transform: rotate(-135deg);
 }
-.moon.moon5{
+.moon.anger{
 	transform: rotate(-180deg);
 }
-.moon.moon6{
+.moon.in_love{
 	transform: rotate(-225deg);
 }
-.moon.moon7{
+.moon.apathetic{
 	transform: rotate(-270deg);
 }
-.moon.moon8{
+.moon.tired{
 	transform: rotate(-315deg);
 }

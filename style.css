@@ -7,7 +7,10 @@ COLORS
 */
 
 body {
-	font-family: 'Nunito', 'Open-Sans', sans-serif;
+    font-family: 'Nunito', 'Open-Sans', sans-serif;
+    text-align: center;
+    align-items: center;
+    align-content: center;
 }
 
 h1 {
@@ -24,17 +27,16 @@ h2 {
 .container {
     border: 2px solid red;
 
-    text-align: center;
-   
+    
 }
 
 .vertical-center {
-    border: 2px solid red;
+    /* border: 2px solid red; */
 
 	min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
 	min-height: 100vh; /* These two lines are counted as one :-)       */
 
-	display: flex;
+    display: flex;
     align-items: center;
     
     color: #545252;
@@ -44,6 +46,12 @@ h2 {
     background: linear-gradient(180deg, #F3F8FF 0%, #E8F2FF 93.1%, #DEECFF 100%);
 }
 
+.home .container img {
+    opacity: 0.125;
+    height: auto;
+    width: 35vw;
+}
+
 .genre {
     background: linear-gradient(180deg, #DEECFF 0%, #D0DBFF 93.61%, #C6CFFF 100%);
 }
@@ -51,6 +59,7 @@ h2 {
 .mood {
     background: linear-gradient(180deg, #C6CFFF 0%, #C8D1FF 93.7%, #E0E1FF 100%);
 }
+
 
 .energy {
     background: linear-gradient(180deg, #E0E1FF 0%, #F2E8F7 36.39%, rgba(229, 192, 230, 0.8) 100%);
@@ -62,4 +71,86 @@ h2 {
 
 .song {
     background: #CAFBFF;
+}
+
+
+/* MOOD */
+.transparent_square{
+	width: 100%;
+    height: auto;
+}
+
+.container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.central_text{
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+}
+
+.moon_container{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 25%;
+	transform: translate(-50%, -50%);
+}
+
+.moon{
+	width: 100%;
+	height: auto;
+	position: relative;
+	left: 175%;
+}
+
+.moon_container.moon1{
+	transform: translate(-50%, -50%);
+}
+.moon_container.moon2{
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+.moon_container.moon3{
+	transform: translate(-50%, -50%) rotate(90deg);
+}
+.moon_container.moon4{
+	transform: translate(-50%, -50%) rotate(135deg);
+}
+.moon_container.moon5{
+	transform: translate(-50%, -50%) rotate(180deg);
+}
+.moon_container.moon6{
+	transform: translate(-50%, -50%) rotate(225deg);
+}
+.moon_container.moon7{
+	transform: translate(-50%, -50%) rotate(270deg);
+}
+.moon_container.moon8{
+	transform: translate(-50%, -50%) rotate(315deg);
+}
+
+.moon.moon2{
+	transform: rotate(-45deg);
+}
+.moon.moon3{
+	transform: rotate(-90deg);
+}
+.moon.moon4{
+	transform: rotate(-135deg);
+}
+.moon.moon5{
+	transform: rotate(-180deg);
+}
+.moon.moon6{
+	transform: rotate(-225deg);
+}
+.moon.moon7{
+	transform: rotate(-270deg);
+}
+.moon.moon8{
+	transform: rotate(-315deg);
 }

@@ -105,12 +105,12 @@
                         
                         <div class="moon_container joy"><img class="moon moon1" src="./icons/mood/joy.svg"></div>
                         <div class="moon_container sadness"><img class="moon sadness" src="./icons/mood/sadness.svg"></div>
-                        <div class="moon_container disgust"><img class="moon disgust" src="./icons/mood/disgust.svg""></div>
+                        <div class="moon_container tired"><img class="moon tired" src="./icons/mood/disgust.svg""></div>
                         <div class="moon_container fear"><img class="moon fear" src="./icons/mood/fear.svg""></div>
                         <div class="moon_container anger"><img class="moon anger" src="./icons/mood/anger.svg""></div>
                         <div class="moon_container in_love"><img class="moon in_love" src="./icons/mood/in_love.svg""></div>
                         <div class="moon_container apathetic"><img class="moon apathetic" src="./icons/mood/apathetic.svg""></div>
-                        <div class="moon_container tired"><img class="moon tired" src="./icons/mood/tired.svg""></div>
+                        <div class="moon_container disgust"><img class="moon disgust" src="./icons/mood/tired.svg""></div>
                     </div>
                     </div>
                 </div>
@@ -120,12 +120,18 @@
         <div class="vertical-center energy">
             <div class="container">
                 <h2>energy</h2>
+<<<<<<< HEAD
                 <div>
                         <br><br><br><br>
                         <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
                         <i>lazy to excited</i>
                       </div>
                 </div>
+=======
+                
+                1<input style="margin-top: 5%; width: 40%"  type="range" name="energy" min="1" max="10">10
+
+>>>>>>> 02253866c55c5f4010b3178facaef6c6010f1a5a
             </div>
         </div>
 
@@ -138,6 +144,31 @@
             </div>
         </div>
 
+<<<<<<< HEAD
+=======
+        <div class="vertical-center song">
+            <div class="container">
+                <h2></h2>
+                <div>
+                <form action = "http://localhost:5000/form" method = "post">
+            <p> <input type = "text" name = "genre" /></p>
+            <p>Enter danceability (0.0-1.0):</p>
+            <p><input type = "text" name = "dance" /></p>
+            <p>Enter energy (0.0-1.0):</p>
+            <p><input type = "text" name = "energy" /></p>
+            <p>Enter tempo (BPM):</p>
+            <p><input type = "text" name = "tempo" /></p>
+            <p>Enter valence: </p>
+            <p><input type = "text" name = "valence" /></p>
+            <p><input type = "submit" value = "submit" /></p>
+        </form>
+                </div>
+            </div>
+                
+        </div>
+
+        <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 		    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 		    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+>>>>>>> 02253866c55c5f4010b3178facaef6c6010f1a5a
         <script type="text/javascript" src="./swiper.min.js"></script>
         <script>
             var swiper = new Swiper('.swiper-container', {
@@ -155,6 +186,33 @@
                 pagination: {
                 el: '.swiper-pagination',
                 },
+            });
+        </script>
+        <script type = "text/javascript" src = "http://code.jquery.com/jquery-1.4.3.min.js"></script>
+        <script type="text/javascript">
+            $('.joy').click(function() {
+                console.log("joy - valence:1.0");
+            });
+            $('.sadness').click(function() {
+                console.log("sadness - valence:0.2");
+            });
+            $('.disgust').click(function() {
+                console.log("disgust - valence:0.3");
+            });
+            $('.fear').click(function() {
+                console.log("fear - 0.4");
+            });
+            $('.anger').click(function() {
+                console.log("anger - 0.1");
+            });
+            $('.in_love').click(function() {
+                console.log("in_love - 0.8");
+            });
+            $('.apathetic').click(function() {
+                console.log("apathetic - 0.5");
+            });
+            $('.tired').click(function() {
+                console.log("tired - 0.6");
             });
         </script>
     </body>

@@ -117,7 +117,13 @@ h2 {
 	width: 100%;
 	height: auto;
 	position: relative;
-	left: 175%;
+    left: 175%;
+}
+.container-fluid img {
+    transition: transform .2s;
+}
+.container-fluid img:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 .moon_container.joy{
 	transform: translate(-50%, -50%);

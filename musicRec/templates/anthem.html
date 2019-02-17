@@ -5,5 +5,10 @@
 </head>
 <body>
 <div>{{ recs[0]['song'] }} by {{ recs[0]['artist'] }}</div>
+
+{{ recs[0]['uri'] }}
+
+<iframe src="{{ recs[0]['uri'] }}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<!-- iframe src={{ recs[0]['url'] }} width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
 </body>
 </html>

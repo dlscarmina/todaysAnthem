@@ -23,11 +23,16 @@ def rec(genre, danceability, energy, tempo, valence):
     output = []
 
     for recommendation in recommendations['tracks']:
+        uri = "https://open.spotify.com/embed/track/" + (recommendation['uri']).split(':')[2]
+
         output.append({
             'song' : recommendation['name'],
             'artist' : recommendation['artists'][0]['name'],
-            'url' : (recommendation['external_urls'])['spotify']
+            'uri' : uri
+            
             }) 
+        #print(recommendation['images'])
+
     return render_template('anthem.html', recs = output)
 
 @app.route('/form', methods = ['POST'])

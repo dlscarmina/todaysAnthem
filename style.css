@@ -7,7 +7,25 @@ COLORS
 */
 
 body {
-	font-family: 'Nunito', 'Open Sans', sans-serif;
+	font-family: 'Nunito', 'Open-Sans', sans-serif;
+}
+
+h1 {
+    font-size: 4.125rem;
+    letter-spacing: 0.04em;
+}
+
+h2 {
+    font-size: 4.125rem;
+    letter-spacing: 0.04em;
+    font-weight: 300;
+}
+
+.container {
+    border: 2px solid red;
+
+    text-align: center;
+   
 }
 
 .vertical-center {
@@ -17,7 +35,9 @@ body {
 	min-height: 100vh; /* These two lines are counted as one :-)       */
 
 	display: flex;
-	align-items: center;
+    align-items: center;
+    
+    color: #545252;
 }
 
 .home {  
